@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAR WARS</title>
+    <!--Material Symbols-->
+    <link rel="stylesheet" 
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!--Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="mainSW.css" type="text/css">
+    <script src="mainSW.js" defer></script>
+</head>
+<body>
+    <!--Background starry effect start-->
+    <div class="starry-background"></div>
+    <!--Background starry effect end-->
+    <!--Top navbar start-->
+    <nav class="navbar">
+        <div class="mobile">
+            <div class="navbar-header">
+                <img src="IMAGES/StarWars-Logo.png" alt="Logo StarWars" class="logo">
+                <div class="more-mobile">
+                    <button id="more2"><span class="material-symbols-outlined">menu</span></button>
+                </div>
+            </div>
+            <div id="links" class="links collapsed">
+                <a href="#">
+                    <div class="main">HOME</div>
+                    <div class="translated">HOME</div>
+                </a>
+                <a href="#">
+                    <div class="main">MOVIES</div>
+                    <div class="translated">MOVIES</div>
+                </a>
+                <a href="#">
+                    <div class="main">SERIES</div>
+                    <div class="translated">SERIES</div>
+                </a>
+                <a href="#">
+                    <div class="main">TIMELINE</div>
+                    <div class="translated">TIMELINE</div>
+                </a>
+                <a href="#">
+                    <div class="main">HOME</div>
+                    <div class="translated">HOME</div>
+                </a>
+                <a href="#">
+                    <div class="main">HOME</div>
+                    <div class="translated">HOME</div>
+                </a>
+            </div>
+        </div>
+        <div class="desktop">
+            <img src="IMAGES/StarWars-Logo.png" alt="Logo StarWars" class="logo">
+            <div class="primary">
+                <a class="hacked-container" href="#">
+                    <div data-value="HOME" class="main hacked">HOME</div>
+                    <div data-value="HOME" class="translated hacked">HOME</div>
+                </a>
+                <a class="hacked-container" href="#">
+                    <div data-value="MOVIES" class="main hacked">MOVIES</div>
+                    <div data-value="MOVIES" class="translated hacked">MOVIES</div>
+                </a>
+                <a class="hacked-container" href="#">
+                    <div data-value="SERIES" class="main hacked">SERIES</div>
+                    <div data-value="SERIES" class="translated hacked">SERIES</div>
+                </a>
+            </div>
+            <div class="secondary full">
+                <a class="hacked-container" href="#">
+                    <div data-value="TIMELINE" class="main hacked">TIMELINE</div>
+                    <div data-value="TIMELINE" class="translated hacked">TIMELINE</div>
+                </a>
+                <a class="hacked-container" href="#">
+                    <div data-value="HOME" class="main hacked">HOME</div>
+                    <div data-value="HOME" class="translated hacked">HOME</div>
+                </a>
+                <a class="hacked-container" href="#">
+                    <div data-value="HOME" class="main hacked">HOME</div>
+                    <div data-value="HOME" class="translated hacked">HOME</div>
+                </a>
+            </div>
+            <div class="secondary mini">
+                <a class="hacked-container" href="#">
+                    <div data-value="MORE" class="main hacked">MORE</div>
+                    <div data-value="MORE" class="translated hacked">MORE</div>
+                </a>
+                <div class="subMenu">
+                    <a class="hacked-container" href="#">
+                        <div data-value="TIMELINE" class="main hacked">TIMELINE</div>
+                        <div data-value="TIMELINE" class="translated hacked">TIMELINE</div>
+                    </a>
+                    <a class="hacked-container" href="#">
+                        <div data-value="HOME" class="main hacked">HOME</div>
+                        <div data-value="HOME" class="translated hacked">HOME</div>
+                    </a>
+                    <a class="hacked-container" href="#">
+                        <div data-value="HOME" class="main hacked">HOME</div>
+                        <div data-value="HOME" class="translated hacked">HOME</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Top navbar end-->
+    <!--Auto minimenu mobile start-->
+    <script>
+        const more2 = document.querySelector('#more2');
+        const links = document.querySelector('#links');
+        more2.addEventListener('click', e =>{
+            links.classList.toggle('collapsed');
+        });
+    </script>
+    <!--Auto minimenu mobile end-->
+</body>
+</html>
