@@ -52,7 +52,7 @@ document.querySelectorAll(".hacked-container").forEach(container => {
 window.onscroll = function(){
     let currentScollPos = window.pageYOffset;
 
-    if (prevScrollPos > currentScollPos){
+    if (prevScrollPos > currentScollPos || window.pageYOffset < 50) {
         navbar.classList.remove("scroll");
     }else{
         navbar.classList.add("scroll");
