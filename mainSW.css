@@ -42,20 +42,9 @@ body{
     font-family: "Aurebesh Mono";
     src: url(FONTS/Aurebesh.otf);
 }
-.starry-background{
-    position: relative;
-    background-color: #111;
-    min-width: 100%;
-    min-height: 200vh;
-    overflow: hidden;
-    z-index: 0;
-}
-.starry-background .stars{
-    position: absolute;
-    pointer-events: none;
-    background-image: linear-gradient(90deg, #f5c272, #ffffff8f);
-    animation: animate 5s ease infinite;
-    border-radius: 50%;
+@font-face {
+    font-family: "Quote Regular";
+    src: url(FONTS/Quote.otf);
 }
 @keyframes animate{
     0%{
@@ -230,4 +219,48 @@ nav .desktop .secondary.mini{
     nav .mobile{
         display: block !important;
     }
+}
+
+
+.quote-container{
+    width: 92%;
+    max-width: 1000px;
+    margin: 0 auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 140px;
+}
+.quote-container.hidden{
+    opacity: 0;
+    filter: blur(1px);
+    transition: all 3s;
+}
+.quote-container.hidden.show{
+    opacity: 1;
+    filter: blur(0);
+}
+.quote-container .title-quote{
+    font-family: "Quote Regular";
+    font-size: 38px;
+    color: #76F9FB;
+    text-align: center;
+}
+
+.starry-background{
+    position: relative;
+    background-color: #111;
+    min-width: 100%;
+    min-height: 200vh;
+    overflow: hidden;
+    z-index: 0;
+}
+.starry-background .stars{
+    position: absolute;
+    pointer-events: none;
+    background-image: linear-gradient(90deg, #f5c272, #ffffff8f);
+    animation: animate 5s ease infinite;
+    border-radius: 50%;
 }

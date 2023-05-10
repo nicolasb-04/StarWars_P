@@ -3,7 +3,8 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 //Declaration for const for hidden and solid navbar
 const navbar = document.querySelector(".navbar");
 let prevScrollPos = window.pageYOffset;
-
+//Declaration for const for scroll hidden elements
+const hiddenElements = document.querySelectorAll(".hidden");
 
 //Declaration for function for hacked links
 document.querySelectorAll(".hacked-container").forEach(container => {
@@ -52,7 +53,7 @@ document.querySelectorAll(".hacked-container").forEach(container => {
 window.onscroll = function(){
     let currentScollPos = window.pageYOffset;
 
-    if (prevScrollPos > currentScollPos || window.pageYOffset < 50) {
+    if (prevScrollPos > currentScollPos || window.pageYOffset < 1) {
         navbar.classList.remove("scroll");
     }else{
         navbar.classList.add("scroll");
@@ -91,3 +92,17 @@ function starryBackground() {
     }, 8000);
 }
 setInterval(starryBackground, 40);
+
+//Declaration for function for hidden on scroll
+const observer = new IntersectionObserver((entries)=> {
+    entries.forEach((entry)=>{
+        console.log(entry)
+        if (entry.isIntersecting){
+            entry.target.classList.add("show");
+        } else{
+            entry.target.classList.remove("show");
+        }
+    });
+});
+
+hiddenElements.forEach((el) => observer.observe(el));
