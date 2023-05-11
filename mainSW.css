@@ -118,13 +118,15 @@ body{
     border-bottom-color: #5a4611;
 }
 .navbar .desktop .secondary.mini .subMenu{
-    padding-left: 10px;
+    padding-left: 15px;
+    padding-right: 10px;
     right: -25px;
 }
 .navbar .desktop .secondary.mini .subMenu a{
     padding: 20px 10px;
     padding-left: 20px;
-    left: -10px;
+    left: -20px;
+    min-width: 100%;
     position: relative;
 }
 .navbar .mobile .navbar-header .more-mobile button{
