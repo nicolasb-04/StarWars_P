@@ -229,7 +229,7 @@ nav .desktop .secondary.mini{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 75px;
+    margin-top: 80px;
 }
 .quote-container.hidden{
     opacity: 0;
@@ -254,7 +254,7 @@ nav .desktop .secondary.mini{
     max-width: 1000px;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .computer-container-full .computer-full{
     display: flex;
@@ -265,6 +265,7 @@ nav .desktop .secondary.mini{
     border-right: 5px solid #6F817F;
     border-bottom: 5px solid #555555;
     border-left: 5px solid #4B5552;
+    box-shadow: 5px 5px 25px #1f1f1f4d;
     background-color: #1F2322;
     height: 100%;
     width: 100%;
@@ -275,21 +276,87 @@ nav .desktop .secondary.mini{
 .computer-container-full .computer-full .computer-in{
     position: absolute;
     top: 10px; left: 10px; right: 10px; bottom: 10px;
+    box-shadow: inset 5px 15px 25px #1f1f1f;
     background-color: #2B3134;
     border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+}
+.computer-container-full .computer-full .computer-in .left-dials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+}
+.computer-container-full .computer-full .computer-in .left-dials .button{
+    background-color: #D5D6B3;
+    border-right: solid 4px #6e6f5d;
+    border-bottom: solid 3px #6e6f5d;
+    box-shadow: 2px 2px 4px #1f1f1fc1;
+    border-radius: 10px;
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+.computer-container-full .computer-full .computer-in .left-dials .options-button{
+    display: flex;
+    flex-direction: row;
+    background-color: #1a0a08;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 8px #100605;
+    margin-top: 20px;
+    margin-right: 15px;
+    height: 100px;
+    width: 100px;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.computer-container-full .computer-full .computer-in .left-dials .options-button .tall{
+    height: 90%;
+    width: 42%;
+    background-color: #2E110E;
+    border-radius: 8px;
+    border-right: solid 3px #130606;
+    border-bottom: solid 2px #130606;
+    box-shadow: 2px 2px 8px #100605;
+}
+.computer-container-full .computer-full .computer-in .left-dials .options-button .two-short{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 42%;
+    justify-content: space-between;
+    align-items: center;
+}
+.computer-container-full .computer-full .computer-in .left-dials .options-button .two-short .red-button{
+    background-color: #2E110E;
+    width: 100%;
+    height: 48%;
+    border-radius: 8px;
+    border-right: solid 3px #130606;
+    border-bottom: solid 2px #130606;
+    box-shadow: 2px 2px 8px #100605;
+}
+.computer-container-full .computer-full .computer-in .right.screen{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
 }
 
 
 
-
-
 .starry-background{
-    position: relative;
+    position: absolute;
+    top: 0;
+    bottom: 0;
     background-color: #111;
     min-width: 100%;
-    min-height: 150vh;
+    min-height: 100%;
     overflow: hidden;
-    z-index: 0;
+    z-index: -1;
 }
 .starry-background .stars{
     position: absolute;
