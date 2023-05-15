@@ -222,18 +222,14 @@ nav .desktop .secondary.mini{
         display: block !important;
     }
 }
-
-
 .quote-container{
     width: 92%;
     max-width: 1000px;
     margin: 0 auto;
-    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    top: 140px;
+    margin-top: 75px;
 }
 .quote-container.hidden{
     opacity: 0;
@@ -250,12 +246,48 @@ nav .desktop .secondary.mini{
     color: #76F9FB;
     text-align: center;
 }
+.computer-container-full{
+    display: flex;
+    resize: horizontal;
+    margin: 0 auto;
+    width: 92%;
+    max-width: 1000px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.computer-container-full .computer-full{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-radius: 35px;
+    border-top: 5px solid #A5AEAB;
+    border-right: 5px solid #6F817F;
+    border-bottom: 5px solid #555555;
+    border-left: 5px solid #4B5552;
+    background-color: #1F2322;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 56.25%;
+}
+.computer-container-full .computer-full .computer-in{
+    position: absolute;
+    top: 10px; left: 10px; right: 10px; bottom: 10px;
+    background-color: #2B3134;
+    border-radius: 25px;
+}
+
+
+
+
 
 .starry-background{
     position: relative;
     background-color: #111;
     min-width: 100%;
-    min-height: 200vh;
+    min-height: 150vh;
     overflow: hidden;
     z-index: 0;
 }
