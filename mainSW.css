@@ -2,6 +2,12 @@ body{
     margin: 0;
     padding: 0;
     background-color: #111;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .material-symbols{
     font-variation-settings:
@@ -290,6 +296,10 @@ nav .desktop .secondary.mini{
     width: 20%;
 }
 .computer-container-full .computer-full .computer-in .left-dials .button{
+    display: flex;
+    justify-content: center;
+    margin-left: 17px;
+    align-items: center;
     background-color: #D5D6B3;
     border-right: solid 4px #6e6f5d;
     border-bottom: solid 3px #6e6f5d;
@@ -297,24 +307,40 @@ nav .desktop .secondary.mini{
     border-radius: 10px;
     height: 80px;
     width: 80px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.computer-container-full .computer-full .computer-in .left-dials .button:hover{
+    background-color: #c0c19f;
+    border-right: solid 3px #6e6f5d;
+    box-shadow: 1px 1px 2px #1f1f1fc1;
+}
+.computer-container-full .computer-full .computer-in .left-dials .button span{
+    color: #858671;
+    font-size: 50px;
+    cursor: pointer;
 }
 .computer-container-full .computer-full .computer-in .left-dials .options-button{
     display: flex;
     flex-direction: row;
-    background-color: #1a0a08;
+    border: solid 2px #180907;
+    background-color: #29100d;
     border-radius: 10px;
     box-shadow: inset 2px 2px 8px #100605;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-right: 15px;
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     gap: 4px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 .computer-container-full .computer-full .computer-in .left-dials .options-button .tall{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 90%;
     width: 42%;
     background-color: #2E110E;
@@ -322,6 +348,17 @@ nav .desktop .secondary.mini{
     border-right: solid 3px #130606;
     border-bottom: solid 2px #130606;
     box-shadow: 2px 2px 8px #100605;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+.computer-container-full .computer-full .computer-in .left-dials .options-button .tall:hover{
+    background-color: #2a0e0b;
+    border-right: solid 2px #130606;
+    box-shadow: 1px 1px 4px #100605;
+}
+.computer-container-full .computer-full .computer-in .left-dials .options-button .tall span{
+    color: #1c0a08;
+    font-size: 70px;
 }
 .computer-container-full .computer-full .computer-in .left-dials .options-button .two-short{
     display: flex;
@@ -332,6 +369,9 @@ nav .desktop .secondary.mini{
     align-items: center;
 }
 .computer-container-full .computer-full .computer-in .left-dials .options-button .two-short .red-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #2E110E;
     width: 100%;
     height: 48%;
@@ -339,6 +379,17 @@ nav .desktop .secondary.mini{
     border-right: solid 3px #130606;
     border-bottom: solid 2px #130606;
     box-shadow: 2px 2px 8px #100605;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+.computer-container-full .computer-full .computer-in .left-dials .options-button .two-short .red-button:hover{
+    background-color: #2a0e0b;
+    border-right: solid 2px #130606;
+    box-shadow: 1px 1px 4px #100605;
+}
+.computer-container-full .computer-full .computer-in .left-dials .options-button .two-short .red-button span{
+    color: #1c0a08;
+    font-size: 40px;
 }
 .computer-container-full .computer-full .computer-in .right.screen{
     display: flex;
