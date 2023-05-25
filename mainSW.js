@@ -5,7 +5,17 @@ const navbar = document.querySelector(".navbar");
 let prevScrollPos = window.pageYOffset;
 //Declaration for const for scroll hidden elements
 const hiddenElements = document.querySelectorAll(".hidden");
+//Declaration for const
+// Get all elements with class "slide"
+const slides1 = document.querySelectorAll(".slide1");
+const slides2 = document.querySelectorAll(".slide2");
+const slides3 = document.querySelectorAll(".slide3");
+// Get all elements with class "stage-1" to "stage-3"
+const stage1 = document.querySelector(".stage-1");
+const stage2 = document.querySelector(".stage-2");
+const stage3 = document.querySelector(".stage-3");
 
+//Declarations for functions
 //Declaration for function for hacked links
 document.querySelectorAll(".hacked-container").forEach(container => {
   const elements = container.querySelectorAll(".hacked");
@@ -106,3 +116,40 @@ const observer = new IntersectionObserver((entries)=> {
 });
 
 hiddenElements.forEach((el) => observer.observe(el));
+
+//Declaration for slide functions
+slides1.forEach(function(slide) {
+    slide.addEventListener("click", function() {
+        // Update selection and show corresponding section
+        document.querySelector(".slide1").classList.add("active");
+        document.querySelector(".slide2").classList.remove("active");
+        document.querySelector(".slide3").classList.remove("active");
+        document.querySelector(".stage-1").classList.add("active");
+        document.querySelector(".stage-2").classList.remove("active");
+        document.querySelector(".stage-3").classList.remove("active");
+    });
+});
+
+slides2.forEach(function(slide) {
+    slide.addEventListener("click", function() {
+        // Update selection and show corresponding section
+        document.querySelector(".slide1").classList.remove("active");
+        document.querySelector(".slide2").classList.add("active");
+        document.querySelector(".slide3").classList.remove("active");
+        document.querySelector(".stage-1").classList.remove("active");
+        document.querySelector(".stage-2").classList.add("active");
+        document.querySelector(".stage-3").classList.remove("active");
+    });
+});
+
+slides3.forEach(function(slide) {
+    slide.addEventListener("click", function() {
+        // Update selection and show corresponding section
+        document.querySelector(".slide1").classList.remove("active");
+        document.querySelector(".slide2").classList.remove("active");
+        document.querySelector(".slide3").classList.add("active");
+        document.querySelector(".stage-1").classList.remove("active");
+        document.querySelector(".stage-2").classList.remove("active");
+        document.querySelector(".stage-3").classList.add("active");
+    });
+});
