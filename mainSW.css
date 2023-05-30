@@ -461,7 +461,7 @@ nav .desktop .secondary.mini{
 }
 .weapon{
     position: relative;
-    top: 40px;
+    top: 80px;
     display: flex;
     margin: 0 auto;
     flex-direction: column;
