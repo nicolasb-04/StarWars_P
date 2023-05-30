@@ -423,13 +423,76 @@ nav .desktop .secondary.mini{
     background-color: #5c5c5c;
     box-shadow: 0px 0px 4px #ffffffbc;
 }
+.description{
+    width: 92%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    color: #F8C433;
+    font-family: "Regular Mono";
+    text-align: center;
+    font-size: 20px;
+}
+@keyframes movementD{
+    0%{
+        display: flex;
+        position: relative;
+        width: 100%;
+        right: 0px;
+        z-index: 1;
+    }
+    100%{
+        right: 30%;
+        width: 30%;
+    }
+}
+@keyframes movementA{
+    0%{
+        display: flex;
+        position: relative;
+        width: 100%;
+        left: 0px;
+    }
+    100%{
+        left: 30%;
+        width: 40%;
+    }
+}
+.parallax{
+    position: relative;
+    top: 40px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 92%;
+    max-width: 1000px;
+}
+.parallax .deathstar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parallax .deathstar #one{
+    display: flex;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.parallax .deathstar .inner.active{
+    animation: movementD 5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
 .starry-background{
     position: absolute;
     top: 0;
     bottom: 0;
     background-color: #111;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 200%;
     overflow: hidden;
     z-index: -1;
 }
