@@ -266,7 +266,7 @@ nav .desktop .secondary.mini{
     align-items: end;
     margin: 20px;
     margin-right: 30px;
-    color: rgb(203, 203, 203);
+    color: #cbcbcb;
 }
 .window1-container .window1 .stage-1 .info .titulo{
     font-size: 24px;
@@ -315,7 +315,7 @@ nav .desktop .secondary.mini{
     align-items: end;
     margin: 20px;
     margin-right: 30px;
-    color: rgb(203, 203, 203);
+    color: #cbcbcb;
 }
 .window1-container .window1 .stage-2 .info .titulo{
     font-size: 24px;
@@ -364,7 +364,7 @@ nav .desktop .secondary.mini{
     align-items: end;
     margin: 20px;
     margin-right: 30px;
-    color: rgb(203, 203, 203);
+    color: #cbcbcb;
 }
 .window1-container .window1 .stage-3 .info .titulo{
     font-size: 24px;
@@ -459,7 +459,7 @@ nav .desktop .secondary.mini{
         width: 40%;
     }
 }
-.parallax{
+.weapon{
     position: relative;
     top: 40px;
     display: flex;
@@ -471,20 +471,37 @@ nav .desktop .secondary.mini{
     width: 92%;
     max-width: 1000px;
 }
-.parallax .deathstar{
+.weapon .deathstar{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.parallax .deathstar #one{
+.weapon .deathstar #one{
     display: flex;
     position: relative;
     width: 100%;
     z-index: 1;
 }
-.parallax .deathstar .inner.active{
+.weapon .deathstar .inner.active{
     animation: movementD 5s ease-in-out forwards;
     animation-delay: 0.5s;
+}
+.weapon .deathstar .d-info{
+    position: absolute;
+    width: 50%;
+    right: 10px;
+    border-radius: 10px;
+    background-color: #393939;
+}
+.weapon .deathstar .d-info .title{
+    font-family: "Star Jedi";
+    color: #cbcbcb;
+    margin: 10px;
+}
+.weapon .deathstar .d-info .info{
+    font-family: "Regular Mono";
+    color: #cbcbcb;
+    margin: 10px;
 }
 .starry-background{
     position: absolute;
@@ -492,7 +509,7 @@ nav .desktop .secondary.mini{
     bottom: 0;
     background-color: #111;
     min-width: 100%;
-    min-height: 200%;
+    min-height: 300%;
     overflow: hidden;
     z-index: -1;
 }

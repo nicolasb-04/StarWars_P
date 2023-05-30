@@ -5,6 +5,7 @@ const navbar = document.querySelector(".navbar");
 let prevScrollPos = window.pageYOffset;
 //Declaration for const for scroll hidden elements
 const hiddenElements = document.querySelectorAll(".hidden");
+const planetsInner = document.querySelectorAll(".inner");
 //Declaration for const
 // Get all elements with class "slide"
 const slides1 = document.querySelectorAll(".slide1");
@@ -154,19 +155,12 @@ slides3.forEach(function(slide) {
     });
 });
 
-
-
-// Declaration for const for scroll hidden elements
-const planetsInner = document.querySelectorAll(".inner");
-
 // Declaration for function for hidden on scroll
 const observer2 = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry);
         if (entry.isIntersecting) {
             entry.target.classList.add("active");
-        } else {
-            entry.target.classList.remove("active");
         }
     });
 });
