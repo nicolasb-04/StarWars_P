@@ -203,7 +203,7 @@ nav .desktop .secondary.mini{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 120px;
 }
 .quote-container.hidden{
     opacity: 0;
@@ -226,7 +226,9 @@ nav .desktop .secondary.mini{
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 20px;
+    overflow: hidden;
+    padding-top: 30px;
+    margin-top: 40px;
 }
 
 .window1-container .window1{
@@ -257,7 +259,9 @@ nav .desktop .secondary.mini{
     height: 105%;
     bottom: 20px;
 }
-.window1-container .window1 .stage-1 .info{
+.window1-container .window1 .stage-1 .info,
+.window1-container .window1 .stage-2 .info,
+.window1-container .window1 .stage-3 .info{
     display: flex;
     flex-direction: column;
     width: 60%;
@@ -268,19 +272,25 @@ nav .desktop .secondary.mini{
     margin-right: 30px;
     color: #cbcbcb;
 }
-.window1-container .window1 .stage-1 .info .titulo{
+.window1-container .window1 .stage-1 .info .titulo,
+.window1-container .window1 .stage-2 .info .titulo,
+.window1-container .window1 .stage-3 .info .titulo{
     font-size: 24px;
     text-align: right;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     text-transform: uppercase;
 }
-.window1-container .window1 .stage-1 .info .cuerpo{
+.window1-container .window1 .stage-1 .info .cuerpo,
+.window1-container .window1 .stage-2 .info .cuerpo,
+.window1-container .window1 .stage-3 .info .cuerpo{
     font-size: 17px;
     text-align: right;
     text-transform: uppercase;
     z-index: 1;
 }
-.window1-container .window1 .stage-1 .info .name{
+.window1-container .window1 .stage-1 .info .name,
+.window1-container .window1 .stage-2 .info .name,
+.window1-container .window1 .stage-3 .info .name{
     font-size: 24px;
     text-align: right;
     font-family: "Star Jedi";
@@ -306,34 +316,6 @@ nav .desktop .secondary.mini{
     top: 55px;
     right: 65px;
 }
-.window1-container .window1 .stage-2 .info{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    font-family: "Regular Mono";
-    justify-content: space-around;
-    align-items: end;
-    margin: 20px;
-    margin-right: 30px;
-    color: #cbcbcb;
-}
-.window1-container .window1 .stage-2 .info .titulo{
-    font-size: 24px;
-    text-align: right;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-}
-.window1-container .window1 .stage-2 .info .cuerpo{
-    font-size: 17px;
-    text-align: right;
-    text-transform: uppercase;
-    z-index: 1;
-}
-.window1-container .window1 .stage-2 .info .name{
-    font-size: 24px;
-    text-align: right;
-    font-family: "Star Jedi";
-}
 .window1-container .window1 .stage-3{
     display: none;
 }
@@ -354,34 +336,6 @@ nav .desktop .secondary.mini{
     height: 70%;
     top: 129px;
     right: 22px;
-}
-.window1-container .window1 .stage-3 .info{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    font-family: "Regular Mono";
-    justify-content: space-around;
-    align-items: end;
-    margin: 20px;
-    margin-right: 30px;
-    color: #cbcbcb;
-}
-.window1-container .window1 .stage-3 .info .titulo{
-    font-size: 24px;
-    text-align: right;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-}
-.window1-container .window1 .stage-3 .info .cuerpo{
-    font-size: 17px;
-    text-align: right;
-    text-transform: uppercase;
-    z-index: 1;
-}
-.window1-container .window1 .stage-3 .info .name{
-    font-size: 24px;
-    text-align: right;
-    font-family: "Star Jedi";
 }
 .window1-container .window1 .slider{
     display: flex;
@@ -444,19 +398,7 @@ nav .desktop .secondary.mini{
     }
     100%{
         right: 30%;
-        width: 30%;
-    }
-}
-@keyframes movementA{
-    0%{
-        display: flex;
-        position: relative;
-        width: 100%;
-        left: 0px;
-    }
-    100%{
-        left: 30%;
-        width: 40%;
+        width: 33%;
     }
 }
 .weapon{
@@ -464,10 +406,8 @@ nav .desktop .secondary.mini{
     top: 80px;
     display: flex;
     margin: 0 auto;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     width: 92%;
     max-width: 1000px;
 }
@@ -488,10 +428,22 @@ nav .desktop .secondary.mini{
 }
 .weapon .deathstar .d-info{
     position: absolute;
+    padding-right: 20px;
     width: 50%;
-    right: 10px;
+    right: 50px;
     border-radius: 10px;
     background-color: #393939;
+}
+.weapon .deathstar .d-info:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20px;
+    height: 35px;
+    border-right: 14px solid #111;
+    border-top: 14px solid transparent;
+    border-left: 14px solid transparent;
+    border-bottom: 14px solid transparent;
 }
 .weapon .deathstar .d-info .title{
     font-family: "Star Jedi";
@@ -547,15 +499,6 @@ nav .desktop .secondary.mini{
         background-color: #2b2f30;
 
     }
-    .window1-container .window1 .info .titulo{
-        font-size: 20px;
-    }
-    .window1-container .window1 .info .cuerpo{
-        font-size: 14px;
-    }
-    .window1-container .window1 .info .name{
-        font-size: 20px;
-    }
     .window1-container .window1{
         display: flex;
         flex-direction: column;
@@ -586,7 +529,9 @@ nav .desktop .secondary.mini{
         bottom: 30px;
         margin-left: 100px;
     }
-    .window1-container .window1 .stage-1 .info{
+    .window1-container .window1 .stage-1 .info,
+    .window1-container .window1 .stage-2 .info,
+    .window1-container .window1 .stage-3 .info{
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -597,20 +542,26 @@ nav .desktop .secondary.mini{
         margin-top: 20px;
         color: rgb(203, 203, 203);
     }
-    .window1-container .window1 .stage-1 .info .titulo{
+    .window1-container .window1 .stage-1 .info .titulo,
+    .window1-container .window1 .stage-2 .info .titulo,
+    .window1-container .window1 .stage-3 .info .titulo{
         font-size: 24px;
         text-align: center;
         margin: 10px;
         text-transform: uppercase;
     }
-    .window1-container .window1 .stage-1 .info .cuerpo{
+    .window1-container .window1 .stage-1 .info .cuerpo,
+    .window1-container .window1 .stage-2 .info .cuerpo,
+    .window1-container .window1 .stage-3 .info .cuerpo{
         font-size: 17px;
         text-align: center;
         text-transform: uppercase;
         margin: 20px;
         z-index: 1;
     }
-    .window1-container .window1 .stage-1 .info .name{
+    .window1-container .window1 .stage-1 .info .name,
+    .window1-container .window1 .stage-2 .info .name,
+    .window1-container .window1 .stage-3 .info .name{
         font-size: 24px;
         text-align: right;
         font-family: "Star Jedi";
@@ -640,35 +591,6 @@ nav .desktop .secondary.mini{
         top: -30px;
         right: 90px;
     }
-    .window1-container .window1 .stage-2 .info{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        font-family: "Regular Mono";
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        margin-top: 20px;
-        color: rgb(203, 203, 203);
-    }
-    .window1-container .window1 .stage-2 .info .titulo{
-        font-size: 24px;
-        text-align: center;
-        margin: 10px;
-        text-transform: uppercase;
-    }
-    .window1-container .window1 .stage-2 .info .cuerpo{
-        font-size: 17px;
-        text-align: center;
-        text-transform: uppercase;
-        margin: 20px;
-        z-index: 1;
-    }
-    .window1-container .window1 .stage-2 .info .name{
-        font-size: 24px;
-        text-align: right;
-        font-family: "Star Jedi";
-    }
     .window1-container .window1 .stage-3{
         display: none;
         flex-direction: column;
@@ -693,35 +615,6 @@ nav .desktop .secondary.mini{
         height: 430px;
         top: -30px;
     }
-    .window1-container .window1 .stage-3 .info{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        font-family: "Regular Mono";
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        margin-top: 20px;
-        color: rgb(203, 203, 203);
-    }
-    .window1-container .window1 .stage-3 .info .titulo{
-        font-size: 24px;
-        text-align: center;
-        margin: 10px;
-        text-transform: uppercase;
-    }
-    .window1-container .window1 .stage-3 .info .cuerpo{
-        font-size: 17px;
-        text-align: center;
-        text-transform: uppercase;
-        margin: 20px;
-        z-index: 1;
-    }
-    .window1-container .window1 .stage-3 .info .name{
-        font-size: 24px;
-        text-align: right;
-        font-family: "Star Jedi";
-    }
     .window1-container .window1 .slider{
         display: flex;
         margin-top: 20px;
@@ -741,5 +634,90 @@ nav .desktop .secondary.mini{
     }
     nav .mobile{
         display: block !important;
+    }
+    .window1-container .window1 .stage-1 .img-space img{
+        position: relative;
+        height: 300px;
+        bottom: -4px;
+        margin-left: 20px;
+    }
+    .window1-container .window1 .stage-2 .img-space img{
+        position: relative;
+        height: 200px;
+        top: 5px;
+        right: 20px;
+    }
+    .window1-container .window1 .stage-3 .img-space img{
+        position: relative;
+        height: 200px;
+        left: 20px;
+        top: 5px;
+    }
+    .window1-container .window1 .stage-1 .info,
+    .window1-container .window1 .stage-2 .info,
+    .window1-container .window1 .stage-3 .info{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-family: "Regular Mono";
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        margin-top: 20px;
+        color: rgb(203, 203, 203);
+    }
+    .window1-container .window1 .stage-1 .info .titulo,
+    .window1-container .window1 .stage-2 .info .titulo,
+    .window1-container .window1 .stage-3 .info .titulo{
+        font-size: 20px;
+        text-align: center;
+        margin: 10px;
+        text-transform: uppercase;
+    }
+    .window1-container .window1 .stage-1 .info .cuerpo,
+    .window1-container .window1 .stage-2 .info .cuerpo,
+    .window1-container .window1 .stage-3 .info .cuerpo{
+        font-size: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 20px;
+        z-index: 1;
+    }
+    .window1-container .window1 .stage-1 .info .name,
+    .window1-container .window1 .stage-2 .info .name,
+    .window1-container .window1 .stage-3 .info .name{
+        font-size: 20px;
+        text-align: right;
+        font-family: "Star Jedi";
+    }
+    .weapon .deathstar .d-info{
+        font-size: 12px;
+        position: absolute;
+        padding-right: 10px;
+        width: 50%;
+        right: 30px;
+        border-radius: 10px;
+        background-color: #393939;
+    }
+    .weapon .deathstar .d-info:after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 20px;
+        height: 35px;
+        border-right: 7px solid #111;
+        border-top: 7px solid transparent;
+        border-left: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+    }
+    .weapon .deathstar .d-info .title{
+        font-family: "Star Jedi";
+        color: #cbcbcb;
+        margin: 10px;
+    }
+    .weapon .deathstar .d-info .info{
+        font-family: "Regular Mono";
+        color: #cbcbcb;
+        margin: 10px;
     }
 }
